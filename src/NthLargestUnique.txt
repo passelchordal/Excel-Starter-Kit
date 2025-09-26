@@ -1,0 +1,6 @@
+# N-th Largest Unique Value
+Purpose: Return the n-th largest unique value from a range.
+Formula:
+=LAMBDA(array,n,
+  LET(u,SORT(UNIQUE(array),,-1),IF(n<=ROWS(u),INDEX(u,n),NA()))
+)
